@@ -1,0 +1,32 @@
+
+  <nav class="navbar navbar-expand-md navbar-primary fixed-top bg-primary">
+   <span class="container">      
+        <img src="assets/logo.jpg" class="image">
+   </span> 
+    <span>
+        <app-search></app-search>
+      </span>  
+      <span>
+          <button class="btn btn-info btn-lg headerBtn" (click)="navigateToCartPage();">      
+             <span class="glyphicon glyphicon-shopping-cart cart">
+                <span class="badge badge-notify"> {{count}} </span>
+             </span>
+            </button>          
+      </span> 
+  </nav>
+   
+
+<div class="col-md-12">
+<div class="col-md-8 appSort" >
+<app-sort></app-sort>
+
+<div  class="appShopping">
+    <app-shopping-list></app-shopping-list>
+</div>
+</div>
+<div class="col-md-4 appFilter">
+  <div class="col-md-12 appFil">
+<app-filter></app-filter>
+</div>
+</div>
+</div>

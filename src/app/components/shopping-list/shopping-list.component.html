@@ -1,0 +1,34 @@
+
+  
+
+<div class="container shopContainer">
+    <div class="row">  
+      <div class="form-group col-md-10" >
+          
+          <div *ngFor="let item of storeProduct | searchItem: searchProduct">
+              <div class="col-md-3 list" >
+                  
+              <img src="{{item.img_url}}" class="imgClass" width="150" height="150"/>
+           <div class="formCtrl">
+           <div class="itemCategory" ><b> {{item.category}} </b></div>
+           <span  class="itemPrice" ><b>{{item.price | currency: 'INR'}} </b></span>
+            <span class="itemDiscount" [ngClass]="item.discount == 0 ? '' : 'strike'" ><b>{{(item.price*100)/(100-item.discount) | number}}</b></span>
+            
+            <span  class="discountPercent" > <b>{{item.discount}}% off</b></span>
+            
+            <div class="cartBtn">
+              <button class="btn-warning addToCart productCart" (click)="addProductOnCart(item)"
+             ><b>Add To Cart</b></button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+  </div>
+  </div>
+
+  <style>
+    .strike{
+      text-decoration: line-through;  
+    }    
+  </style>

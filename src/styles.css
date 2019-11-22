@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+ .filterContent {
+    margin-left: 13%; 
+    margin-top: -46px;
+ }
+ .filterBtn { 
+    height: 50px; 
+   
+ }
+ .filterLabel {
+    text-align: center;
+ }
+.appFilter {
+    margin-top: 20%;
+}
+.appFil {
+    margin-right: -55%;
+}
+ .image {
+    width: 70px;
+  height: 70px;
+  margin-right: 80%;
+}
+.cart {
+    font-size: 40px;
+}
+.headerBtn {
+    margin-left: 10px !important;
+}
+
+.appShopping {
+    margin-right: -45%;
+}
+.appSort {
+    margin-top: 9%;
+}
+
+.searchBar { 
+    margin-left: -70%;
+}
+.searchIcon {
+    color:whitesmoke;  
+    font-size: 25px;
+}
+
+.container {
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    margin-left: 50px;
+}
+
+.priceSort {
+    font-size: 25px; 
+    margin-left: 30px;
+    padding-left: 20px;
+}
+.sortLabel {
+    font-size:30px;
+    margin-left:48px
+}
+.lowToHigh {
+    padding-left: 50px;
+}
+.list {
+    padding-top: 10px;
+}
+.shopContainer {
+    margin-left: 0%;
+}
+.imgClass {
+    padding-top: 10px; 
+   
+}
+.formCtrl{
+    padding-top: 10px;
+}
+.itemCategory{
+    color: grey; 
+    font-size: 12px; 
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+}
+.itemPrice{
+    margin-bottom: 20px; 
+    font-size: 12px;
+}
+.itemDiscount{
+    color: grey;
+}
+.discountPercent{
+    color: green; 
+    font-size: 12px; 
+    padding-left: 5px;
+}
+.cartBtn {
+    padding-top: 20px;
+   
+}
+.productCart {
+    height: 50px; 
+    margin-left: 10px; 
+    border-radius: 10px;
+}
+.cartContainer {
+    margin-top: 16%;
+}
+.cartCtrl {
+    border: 2px solid black;
+     margin-bottom: 7%;
+     margin-left: -7%; 
+}
+.cartImage {
+    padding-top: 10px;
+}
+.cartDiscountPercent {
+    color: green;
+}
+.priceBox {
+    border: 2px solid black;
+    margin-top: 10%;
+}
+.cartDiscountPrice {
+    margin-left: 20px;
+}
+.cartActualPrice{
+    margin-left: 20px;
+}
+.cartTotalPrice {
+    margin-left: 20px;
+}
