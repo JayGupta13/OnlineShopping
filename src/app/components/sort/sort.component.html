@@ -1,8 +1,10 @@
-
-<div class="container">
-<label><b class="sortLabel">Sort By </b></label>
-<span class="priceSort"><a href=""  (click)="priceHighToLow()"><b>Price--High_Low</b></a>
-<a href="" class="lowToHigh" (click)="priceLowToHigh()"><b>Price--Low_High</b></a>
-<a href="" class="lowToHigh" (click)="discountPrice()"><b> Discount</b></a>
-</span>
+<div class="col-md-12">
+    <div class="sortContainer row">
+        <label class="sortLabel"><b>Sort By</b></label>
+        <div class="sortDiv">
+            <span class="priceSort"><a href="" (click)="priceHighToLow()"><b>Price--High_Low</b></a></span>
+            <span class="priceSort"><a href="" (click)="priceLowToHigh()"><b>Price--Low_High</b></a></span>
+            <span class="priceSort"><a href="" (click)="discountPrice()"><b>Discount</b></a></span>
+        </div>
+    </div>
 </div>

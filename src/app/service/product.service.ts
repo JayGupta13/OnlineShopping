@@ -22,13 +22,11 @@ public sortHighToLow = this.highToLowPrice.asObservable();
 private discount = new BehaviorSubject<any>('');
 public afterDiscount = this.discount.asObservable();
 
-private addProduct = new BehaviorSubject<any>([]);
+private addProduct = new BehaviorSubject<any>('');
 public addProductToCart = this.addProduct.asObservable();
 
 private minMaxValue = new BehaviorSubject<any>('');
 public maxValue = this.minMaxValue.asObservable();
-
-
 
   getProduct() {
     return this.http.get(this.productUrl);
@@ -50,11 +48,8 @@ public maxValue = this.minMaxValue.asObservable();
     this.discount.next(text);
   }
 
-  setProductFromCart(product) {
+  getProductFromCart(product) {
     this.addProduct.next(product);
-  }
-  getProductFromCart() {
-    return this.addProduct;
   }
 
   getFilterProduct(filterProduct) {

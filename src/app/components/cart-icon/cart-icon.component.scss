@@ -1,0 +1,49 @@
+
+
+$inputGroupML: 63%;
+$inputGroupMT:  -12%;
+$inputGroupPosition: relative;
+$buttonHeight: 38px;
+$buttonPadding: 0; 
+$buttonWidth: 38px;
+$buttonFW: bold;
+$quantityML: -6px;
+$quantityTA: center;
+$quantityDisplay: inline-block;
+$quantitySize: 13px;
+$quantityM: 0 0 5px;
+$quantityWidth: 62px;
+$quantityResize: vertical;
+$btnPlus: -13px;
+
+.input-group {
+  clear: both;
+  margin-left: $inputGroupML;
+  margin-top: $inputGroupMT;
+  position: $inputGroupPosition;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  font-weight: $buttonFW;
+  height: $buttonHeight;
+  padding: $buttonPadding;;
+  width: $buttonWidth;
+  position: $inputGroupPosition;
+}
+
+.input-group .quantity-field {
+  position: $inputGroupPosition;
+  height: $buttonHeight;
+  left: $quantityML;
+  text-align: $quantityTA;
+  width: $quantityWidth;
+  display: $quantityDisplay;
+  font-size: $quantitySize;
+  margin: $quantityM;
+  resize: $quantityResize;
+}
+
+.button-plus {
+  left: $btnPlus;
+}

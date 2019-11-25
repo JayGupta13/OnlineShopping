@@ -3,16 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiEndPointUrl: 'http://localhost:3000/',
-  isJSONServer: true
+  production: false
 };
-
-export const API_CONSTANTS = {
-
-  // Search By Text
-  'GET_SEARCH_DEVICE': 'searchDevice',
-}
 
 /*
  * For easier debugging in development mode, you can import the following file

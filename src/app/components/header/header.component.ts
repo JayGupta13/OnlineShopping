@@ -6,10 +6,11 @@ import { ProductService } from '../../service/product.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-count: number = 0;
+starImage = "./assets/starPic.jpg"
+counter: number = 0;
 storeProduct: any = [];
 selectedProduct: any = [];
 
@@ -17,12 +18,10 @@ constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit() {
     this.productService.addProductToCart.subscribe(item => { 
-        this.count = item.length;
-    });
+      this.counter = item.length;
+  });
   }
   navigateToCartPage() {
     this.router.navigateByUrl('/cart');
   }
-
-
 }

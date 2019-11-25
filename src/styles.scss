@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import "scss/variables";
+
+ .filterBtn { 
+    height: $filterheight; 
+    background-color: $lightBlue !important;
+    border-radius: $border-radius;
+    color: $whitesmoke !important;
+   
+ }
+ .filterLabel {
+    text-align: $filterTextAlign;
+ }
+.appFilter {
+    margin-top: $filterMarginTop;
+}
+.mainContentDiv {
+    margin-top: $mainContent;
+    // padding: 0px 30px;
+}
+ .image {
+    width: $imageWidth;
+  height: $imageHeight;
+  margin-right: $imageMR;
+}
+.cart {
+    font-size: $cartFontSize;
+}
+.btnCart {
+    margin-top: $btnCartMT;
+}
+.headerBtn {
+    margin-left: $headerML;
+}
+
+.searchBar { 
+    margin-right: $searchRM;
+}
+.searchBox {
+    margin-left: $searchBoxML !important;
+}
+.searchIcon {
+    color:$whitesmoke;  
+    font-size: $searchIconFontSize;
+    padding-left: $searchIconPL;
+    margin-top: $listPT;
+}
+
+.sortContainer {
+    font-family: $sortContainer;
+}
+
+.priceSort {
+    font-size: $commonFontSize; 
+    padding-left: $pricePL;
+}
+.sortLabel {
+    font-size:$sortLabelFontSize;
+}
+.sortDiv {
+    padding-top: $sortPaddingTop;
+}
+.list {
+    padding-top: $listPT;
+}
+.imgClass {
+    padding-top: $listPT; 
+   
+}
+.formCtrl{
+    padding-top: $listPT;
+}
+.itemCategory{
+    color: $grey; 
+    font-size: $itemCategoryFS; 
+    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+}
+.itemPrice{
+    margin-bottom: $commonFontSize;
+    font-size: $itemCategoryFS;
+}
+.itemDiscount{
+    color: $grey;
+}
+.discountPercent{
+    color: $green; 
+    font-size: $itemCategoryFS; 
+    padding-left: $discountPricePL;
+}
+.cartBtn {
+    padding-top: $commonFontSize;
+   
+}
+.productCart {
+    height: $filterheight; 
+    margin-left: $listPT; 
+    border-radius: $listPT;
+}
+.cartContainer {
+    margin-top: $cartMT;
+}
+.cartCtrl {
+    border: $border $darkgrey;
+}
+.cartImage {
+    padding-top: $listPT;
+}
+.cartDiscountPercent {
+    color: $green;
+}
+.priceBox {
+    border: $border $darkgrey;
+}
+.cartDiscountPrice {
+    margin-left: $commonFontSize;
+}
+.cartActualPrice{
+    margin-left: $commonFontSize;
+}
+.cartTotalPrice {
+    margin-left: $commonFontSize;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

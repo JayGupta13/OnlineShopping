@@ -5,7 +5,7 @@ import { ProductService } from '../../service/product.service';
 @Component({
   selector: 'app-cart-icon',
   templateUrl: './cart-icon.component.html',
-  styleUrls: ['./cart-icon.component.css']
+  styleUrls: ['./cart-icon.component.scss']
 })
 export class CartIconComponent implements OnInit {
   storeProduct: any = [];
@@ -31,6 +31,7 @@ export class CartIconComponent implements OnInit {
       }
       this.selectedProduct = item;
     });
+
   }
   removeProduct(product) {
     this.selectedProduct.splice(this.selectedProduct.indexOf(product), 1);
@@ -42,8 +43,7 @@ export class CartIconComponent implements OnInit {
     }
     this.calculateFinalAmount();
   }
-  addOne(count, i) {    
-    //item = item.counter + 1;
+  addOne(count, i) { 
     if(count == undefined) {
       count = 1;
     }
@@ -59,9 +59,10 @@ export class CartIconComponent implements OnInit {
 
     for (let j = 0; j < selectedItem.length; j++) {
       var item = selectedItem[j];
-      this.actualAmount = this.actualAmount + Math.floor(item.counter*(item.price*100)/(100-item.discount));
+      this.actualAmount = this.actualAmount + Math.floor(item.counter*(item.price*100)/(100-item.discount)); // Actual Price calculation
+      // price after discount
       this.discountAmount = this.discountAmount + (item.counter*(Math.floor(item.counter*(item.price*100)/(100-item.discount))*item.discount/100));
-      this.totalAmount = this.totalAmount + (item.counter*item.price);
+      this.totalAmount = this.totalAmount + (item.counter*item.price); // Total Amount Payable
     }
 
 

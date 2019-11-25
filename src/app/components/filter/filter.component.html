@@ -2,11 +2,9 @@
     <div data-role="main" class="ui-content col-md-12 filterContent">
         <h1>Filter</h1>
         <form #minMaxValue="ngForm">
-        <div data-role="rangeslider">
-              
-              <input type="range" name="price-min" id="priceMin" ngModel value="200" min="0" max="1000">
-              
-              <input type="range" name="price-max" id="priceMax" ngModel value="800" min="0" max="1000">
+        <div data-role="rangeslider">              
+              <input type="range" name="price-min" id="priceMin" ngModel value="100" min="0" max="10000">  
+              <input type="range" name="price-max" id="priceMax" ngModel value="10000" min="0" max="10000">
             </div>
        
         <label class="filterLabel">price</label>

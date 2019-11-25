@@ -4,11 +4,11 @@ import { ProductService } from '../../service/product.service';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.scss']
 })
 export class ShoppingListComponent implements OnInit {
 storeProduct: any = [];
-tempNewCartItems: any = [];
+productAddToCart: any = [];
 searchProduct: any;
   constructor( private productService: ProductService) { 
     this.productService.shareData.subscribe(item => {
@@ -21,49 +21,38 @@ searchProduct: any;
     this.productService.getProduct().subscribe(item => {      
       this.storeProduct = item;
     });
-    this.productService.getProductFromCart().subscribe(item => {
-      this.tempNewCartItems = item;
-    });
     this.sortLowToHigh();
     this.sortHighToLow();
     this.priceAfterDiscount();
     this.filterOnMinMaxValue();
-
-    // this.productService.updateSortData(this.storeProduct);
-    // this.productService.sortShareData.subscribe(this.storeProduct);
   }
 
   sortLowToHigh () {
-  this.productService.sortShareData.subscribe(item => {
-    this.storeProduct = item;
+  this.productService.sortShareData.subscribe(item => { 
+    this.storeProduct = item; // sort product low to high price
   });
 };
 
 sortHighToLow () {
   this.productService.sortHighToLow.subscribe(item => {
-    this.storeProduct = item;
+    this.storeProduct = item; // sort product high to low price
   });
 };
 
-
 priceAfterDiscount () {
   this.productService.afterDiscount.subscribe(item => {
-    this.storeProduct = item;
+    this.storeProduct = item; // show discount price
   });
 };
 
 addProductOnCart(item) {
-  let tempArray = [];
-  if(this.tempNewCartItems.length) {
-    tempArray = this.tempNewCartItems;
-  }
-  tempArray.push(item);
-  this.productService.setProductFromCart(tempArray);
+  this.productAddToCart.push(item); // getting product and updating to service
+  this.productService.getProductFromCart(this.productAddToCart);
 }
 
 filterOnMinMaxValue() {
   this.productService.maxValue.subscribe(item => {
-    this.storeProduct = item;
+    this.storeProduct = item; // filter product on price range
   });
 }
 

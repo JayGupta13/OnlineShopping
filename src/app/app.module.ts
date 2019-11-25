@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConfirmDialogModule, ConfirmationService, SharedModule }   from 'primeng/primeng';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
@@ -14,7 +12,8 @@ import { FilterComponent } from './components/filter/filter.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchItemPipe } from './pipe/search-item.pipe';
-// import { environment } from '../environments/environment';
+import {MatInputModule} from '@angular/material/input';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -34,10 +33,11 @@ import { SearchItemPipe } from './pipe/search-item.pipe';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     FormsModule,
-    SharedModule,
-    ConfirmDialogModule
-    
+    MatInputModule,
+    // NgbModule,
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
