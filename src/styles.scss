@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~bootstrap/scss/bootstrap.scss";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 @import "scss/variables";
 
  .filterBtn { 
@@ -19,6 +20,10 @@
 .mainContentDiv {
     margin-top: $mainContent;
     // padding: 0px 30px;
+}
+.removeBtn {
+    color: $black !important;
+    margin-top: $discountPricePL !important;
 }
  .image {
     width: $imageWidth;

@@ -24,7 +24,7 @@
                   <input type="number" id="inputValue" [(ngModel)]='item.counter' name="quantity"
                      class="quantity-field" />
                   <button type="button" value="+" (click)="addOne(item.counter, i)" class="button-plus">+</button>
-                  <button type="button" class="w3-btn w3-black" (click)="removeProduct(item)">Remove</button>
+                  <a href="" class="removeBtn"  (click)="removeProduct(item)">Remove</a>
                </div>
             </div>
          </div>
@@ -33,14 +33,14 @@
    <div class="col-md-4 priceBox">
       <h2>PRICE DETAILS</h2>
       <hr>
-      <div>
+      <div class="container">
          <h5> Price ({{totalCounter}} item) : <span class="cartActualPrice">{{actualAmount}}</span></h5>
          <h5> Discount : <span class="cartDiscountPrice"> {{discountAmount}}</span></h5>
          <hr>
          <h3>Total Payable <span class="cartTotalPrice">{{totalAmount}}</span> </h3>
       </div>
+      </div>
    </div>
-</div>
 <style>
    .strike {
       text-decoration: line-through;

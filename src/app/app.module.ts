@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchItemPipe } from './pipe/search-item.pipe';
 import {MatInputModule} from '@angular/material/input';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
