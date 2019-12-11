@@ -21,6 +21,9 @@ searchProduct: any;
     this.productService.getProduct().subscribe(item => {      
       this.storeProduct = item;
     });
+    this.productService.getProductFromCart().subscribe(item => {
+      this.productAddToCart = item;
+    });
     this.sortLowToHigh();
     this.sortHighToLow();
     this.priceAfterDiscount();
@@ -46,8 +49,12 @@ priceAfterDiscount () {
 };
 
 addProductOnCart(item) {
-  this.productAddToCart.push(item); // getting product and updating to service
-  this.productService.getProductFromCart(this.productAddToCart);
+  let tempArray = [];
+  if(this.productAddToCart.length) {
+    tempArray = this.productAddToCart;
+  }
+  tempArray.push(item);
+  this.productService.setProductFromCart(tempArray);
 }
 
 filterOnMinMaxValue() {

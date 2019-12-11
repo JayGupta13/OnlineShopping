@@ -48,8 +48,11 @@ public maxValue = this.minMaxValue.asObservable();
     this.discount.next(text);
   }
 
-  getProductFromCart(product) {
+  setProductFromCart(product) {
     this.addProduct.next(product);
+  }
+  getProductFromCart() {
+    return this.addProduct;
   }
 
   getFilterProduct(filterProduct) {
